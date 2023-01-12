@@ -46,13 +46,52 @@ nav ul li a{
     font-size: 20px;
     font-weight: 600;
 }
+
 .home{
-    margin: 120px;
+    margin: 20px;
 }
+.first{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    margin-left: 5rem;
+}
+
 .home .contain{
     display: flex;
    
 }
-.img-home{
+.text-home h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    padding: 5rem 0;
+    
+
+}
+.text-home p{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    width: 296px;
+    line-height: 22px;
+    padding-bottom: 3rem;
+}
+.text-home button{
+    border: 2px solid #D32121;
+    background: #D32121;
+    border-radius: 10px;
+    padding: .5rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.img-home img{
+    position: absolute;
+    top: 9rem;
+    left: 60rem;
+    width: 295px;
+    height: 571px;
    
 }
