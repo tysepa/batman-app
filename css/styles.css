@@ -1,97 +1,202 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
 }
 body{
-    position: relative;
-    width: 959px;
-    height: 758px;
+    width: 86.3%;
     background: radial-gradient(50% 50% at 50% 50%, #AABCA4 0%, rgba(10, 12, 10, 0.56) 100%);
+    /* background: #fefefe; */
 }
-label{
+header{
+    width: 100%;
+    height: 80px;
+    background: #11101b07;
     display: flex;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 60px;
-    margin-left: 30px;
-
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
 }
-label img{
+
+.logo img{
     width: 80px;
     height: 40px;   
+    /* background-color: #fefefe; */
 }
-nav{
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+}
+.nav-bar ul{
     display: flex;
-   
-   
 }
-nav ul{
-    display: flex;
-    padding: 2rem;
-    margin-left: 40rem;
-   
-   
-}
-nav ul li {
-    list-style: none;
-    padding: 2rem;
-    float: right;
-    color: white;
-}
-nav ul li a{
-    color: white;
+.nav-bar ul li a{
+    display: block;
+    color: #fefefe;
     font-size: 20px;
-    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+
+}
+.nav-bar ul li a:hover{
+    color: #11101b;
+    background: #fefefe;
+}
+.hamburger{
+    display: none;
 }
 
-.home{
-    margin: 20px;
+@media only screen and (max-width:1320px) {
+    header{
+        padding: 0 50px;
+        width: 110%; 
+    }
+    
+}
+@media only screen and (max-width:1100px) {
+    header{
+        padding: 0 30px; 
+        width: 110%;
+    }
+    
+}
+@media only screen and (max-width:900px) {
+    header{
+        width: 110%;
+    }
+    .hamburger{
+       display: block;
+       cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b8a;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 99;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+
+    }
+   
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+        /* color: red; */
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    
 }
 .first{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 5rem;
-    margin-left: 5rem;
+    margin: 5rem;
+    padding: 20px;
 }
-
-.home .contain{
-    display: flex;
+.contain{
+    display:flex;
+}
+.text-home{
+    color: #fefefe;
+    position: absolute;
+    margin-top: 3rem;
    
 }
 .text-home h1{
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
-    color: white;
-    padding: 5rem 0;
-    
+    margin-bottom: 2rem;
 
 }
 .text-home p{
-    color: white;
-    font-size: 18px;
+    font-size: 34px;
     font-weight: 600;
-    width: 296px;
-    line-height: 22px;
-    padding-bottom: 3rem;
+    width: 580px;
+    margin-bottom: 2rem;
+    line-height: 40px;
 }
-.text-home button{
-    border: 2px solid #D32121;
-    background: #D32121;
+button{
+    background: red;
+    border: 1px solid red;
     border-radius: 10px;
-    padding: .5rem;
-    color: white;
+    color: #fefefe;
     font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
 }
 .img-home img{
-    position: absolute;
-    top: 9rem;
-    left: 60rem;
-    width: 295px;
-    height: 571px;
+    margin-left: 50rem;
+    margin-top: -40px;
+    
+    
+}
+@media only screen and (max-width:1320px) {
+    .img-home img{
+        margin-left: 40rem;
+    }
+    
+}
+@media only screen and (max-width:1110px) {
+    .img-home img{
+        margin-left: 30rem;
+    }
+    .text-home h1{
+        font-size: 40px;
+    }
+    .text-home p{
+        font-size: 20px;
+        width: 320px;
+    }
+    
+}
+@media only screen and (max-width:900px) {
+    .img-home img{
+        margin-left: 20rem;
+    }
+    .text-home h1{
+        font-size: 30px;
+    }
+    .text-home p{
+        font-size: 16px;
+        width: 260px;
+    }
+    
+}
+@media only screen and (max-width:720px) {
+    .img-home img{
+        margin-left: 10rem;
+    }
    
+    
+}
+@media only screen and (max-width:520px) {
+    .img-home img{
+        margin-left: 3rem;
+    }
+   
+    
 }
